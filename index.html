@@ -18,8 +18,14 @@
         <header>
             <div class="container nav-wrapper">
                 <div class="logo">Himasha<span>.</span></div>
-                <nav>
-                    <ul class="nav-links glass-nav">
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"
+                    aria-controls="primaryNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="site-nav" id="primaryNav">
+                    <ul class="nav-links glass-nav" id="navMenu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Project</a></li>
@@ -41,7 +47,7 @@
 
                     <h1 class="main-name">
                         Himasha Kashmira <br>
-                        <span>UI/UX Developer</span>
+                        <span id="typing-text">UI/UX Developer</span>
                     </h1>
 
                     <p class="hero-bio">
@@ -59,9 +65,9 @@
                 <div class="hero-visual">
 
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="GitHub"><img src="Assets/logo/github.png" alt="GitHub"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="Assets/logo/linkedin.png" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Facebook"><img src="Assets/logo/facebook.png" alt="Facebook"></a>
                     </div>
 
                     <div class="profile-circle">
@@ -75,144 +81,244 @@
 
         <!-- SERVICES STRIP -->
         <div class="services-strip">
-            <div class="container strip-inner">
-                <span>Website Development</span>
-                <span>Mobile App Design</span>
-                <span>UI/UX Design</span>
-                <span>Full-stack Dev</span>
-                <span>Software Design</span>
+            <div class="strip-track">
+                <div class="strip-inner">
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Java Development</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Web Development</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Problem Solving</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>UI/UX Design</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Database Design</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Full-Stack Dev</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Mobile App Design</span>
+                </div>
+                <div class="strip-inner" aria-hidden="true">
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Java Development</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Web Development</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Problem Solving</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>UI/UX Design</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Database Design</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Full-Stack Dev</span>
+                    <span class="strip-item"><i class="fas fa-circle-nodes"></i>Mobile App Design</span>
+                </div>
             </div>
         </div>
 
         <!-- ABOUT SECTION -->
-        <section class="about">
-            <div class="about-img">
-                <div class="image-wrapper">
-                    <img src="Assets/images/About-img.png" alt="About Me">
+        <section id="about" class="about-section">
+
+            <!-- Top: Profile image + text -->
+            <div class="about-top">
+                <div class="about-img">
+                    <div class="image-wrapper">
+                        <img src="Assets/images/About-img.png" alt="About Me">
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <span class="about-label">About Me</span>
+                    <h2>I'm Himasha Kashmira,<br>I'm a Professional Softwere Engineer.</h2>
+                    <p>I am a Software Engineering student with a strong interest in building functional and
+                        user-friendly software solutions. I enjoy learning new technologies, improving my coding skills,
+                        and applying what I learn through practical projects.<br>
+                        My goal is to grow as a skilled software engineer and create software that delivers real value
+                        to
+                        users.</p>
+                    <button class="btn-cv">Download CV</button>
                 </div>
             </div>
-            
-            <div class="about-text">
-                <h4>About Me</h4>
-                <h2>I'm Himasha Kashmira, <br>I'm a Professional Softwere Engineer.</h2>
-                <p>I am a Software Engineering student with a strong interest in building functional and user-friendly
-                    software solutions. I enjoy learning new technologies, improving my coding skills, and applying what
-                    I learn through practical projects.</p>
-                <button class="btn-primary">Download CV</button>
+
+            <!-- Bottom: Education + Skills cards -->
+            <div class="about-bottom">
+
+                <!-- Education Card -->
+                <div class="info-card edu-card">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="tl-year">2025 - 2028</span>
+                            <div class="tl-body">
+                                <h4>BSc (Hons) in Computer Science</h4>
+                                <p>University of Bolton (UK)</p>
+                                <span class="tl-badge pursuing">Pending</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="tl-year">2025 - Present</span>
+                            <div class="tl-body">
+                                <h4>Graduate Diploma in Software Engineering</h4>
+                                <p>Institute of Software Engineering (IJSE)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="tl-year">2022</span>
+                            <div class="tl-body">
+                                <h4>G.C.E A/L Examination - Maths Stream</h4>
+                                <p>Ruhunu Vijayaba College</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="tl-year">2019</span>
+                            <div class="tl-body">
+                                <h4>G.C.E O/L Examination</h4>
+                                <p>Ruhunu Vijayaba College</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="info-card skills-card">
+                    <div class="card-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Skills</h3>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title"><span class="dot"></span> Front-End</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title"><span class="dot"></span> Back-End</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">OOP</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title"><span class="dot"></span> Databases &amp; DevOps</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title"><span class="dot"></span> Professional Skills</div>
+                        <div class="soft-skills">
+                            <div class="soft-skill-item">
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress" style="width:90%"></div>
+                                </div>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress" style="width:85%"></div>
+                                </div>
+                                <span>Communication</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress" style="width:88%"></div>
+                                </div>
+                                <span>Teamwork</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress" style="width:92%"></div>
+                                </div>
+                                <span>Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-
-        <!-- Education -->
-        <section class="edu-skills">
-            <div class="skills-container">
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h4>Front-End</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">DataBase</span>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Back-End</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express.js</span>
-                        <span class="skill-tag">OOP</span>
-                    </div>
-                </div>
-
-                <!-- Databases -->
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h4>Databases & DevOps</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <h4>Professional Skills</h4>
-                    <div class="soft-skills">
-                        <div class="soft-skill-item">
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress" data-percentage="90"></div>
-                            </div>
-                            <span>Problem Solving</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress" data-percentage="85"></div>
-                            </div>
-                            <span>Communication</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress" data-percentage="88"></div>
-                            </div>
-                            <span>Teamwork</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress" data-percentage="92"></div>
-                            </div>
-                            <span>Adaptability</span>
-                        </div>
-                    </div>
-                </div>
         </section>
 
         <!-- CERTIFICATIONS -->
-        <section class="certifications container">
-            <div class="section-title-icon">
-                <i class="fas fa-star"></i>
+        <section class="certifications">
+            <div class="cert-header">
+                <div class="cert-icon-wrap">
+                    <i class="fas fa-star"></i>
+                </div>
                 <h2>Certifications & Achievements</h2>
+                <div class="cert-divider"></div>
+                <p class="cert-subtitle">Professional certifications and accomplishments that showcase my expertise</p>
             </div>
+
             <div class="cert-grid">
-                <div class="cert-item"></div>
-                <div class="cert-item"></div>
-                <div class="cert-item"></div>
+                <div class="cert-card">
+                    <div class="cert-card-top"></div>
+                    <div class="cert-card-bottom"></div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-card-top"></div>
+                    <div class="cert-card-bottom"></div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-card-top"></div>
+                    <div class="cert-card-bottom"></div>
+                </div>
             </div>
         </section>
 
         <!-- MY PROJECTS -->
         <section class="projects">
-            <div class="section-title">
-                <i class="fas fa-star" style="color: #8b5cf6;"></i>
+            <div class="projects-header">
                 <h2>My Projects</h2>
+                <div class="projects-divider"></div>
             </div>
+
             <div class="project-grid">
                 <div class="project-card">
-                    <img src="Assets/images/Project1.jpg" alt="Connect 4">
+                    <div class="project-img-wrap">
+                        <img src="Assets/images/Project1.jpg" alt="Connect 4">
+                    </div>
                     <div class="project-info">
                         <h3>Connect 4 Game</h3>
-                        <div class="chips"><span>Java</span> <span>OOP</span> <span>Java FX</span></div>
+                        <div class="chips">
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Java FX</span>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="Assets/images/Photography.png" alt="Photography System">
+                    <div class="project-img-wrap">
+                        <img src="Assets/images/Photography.png" alt="Photography System">
+                    </div>
                     <div class="project-info">
                         <h3>Photography System</h3>
-                        <div class="chips"><span>Java</span> <span>MVC</span> <span>MySQL</span></div>
+                        <div class="chips">
+                            <span>Java</span>
+                            <span>MVC</span>
+                            <span>MySQL</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="btn-outline view-more"><i class="fab fa-github"></i> View More Projects ></button>
+
+            <div class="projects-footer">
+                <button class="btn-view-more">
+                    <i class="fab fa-github"></i> View More Projects >
+                </button>
+            </div>
         </section>
 
         <!-- ASSIGNMENT SECTION -->
-        <section id="assignments" class="assignments container">
-            <h2 class="title-center">Assignment</h2>
+        <section id="assignments" class="assignments">
+            <div class="assign-header">
+                <h2>Assignment</h2>
+                <div class="assign-divider"></div>
+            </div>
             <div class="assign-grid">
                 <div class="assign-item">Assignment 01</div>
                 <div class="assign-item">Assignment 02</div>
@@ -230,59 +336,130 @@
         </section>
 
         <!-- GALLERY SECTION -->
-        <section class="gallery container">
-            <div class="gallery-header">
-                <h2>Gallery</h2>
-                <p>Some moments from my journey.</p>
-            </div>
-            <div class="gallery-layout">
-                <div class="gal-img"></div>
-                <img src="Assets/images/1.jpeg" alt="">
-                <div class="gal-img"></div>
-                <div class="gal-img"></div>
+        <section id="gallery" class="gallery">
+            <div class="gallery-container">
+
+                <div class="g">
+                    <a href="#">1 <img src="Assets/images/1.jpeg"></a>
+                    <a href="#">2 <img src="Assets/images/2.jpeg"></a>
+                    <a href="#">3 <img src="Assets/images/3.jpeg"></a>
+                    <a href="#">4 <img src="Assets/images/4.jpeg"></a>
+                    <a href="#">5 <img src="Assets/images/5.jpeg"></a>
+                </div>
+
+                <article class="gal-article">
+                    <h1>Gallery Moments</h1>
+                    <p>Moments captured with my team, friends, and group activities during our learning journey.</p>
+                </article>
+
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id="contact" class="contact container">
-            <h2 class="title-center">Get in Touch</h2>
+        <section id="contact" class="contact-section">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>Have a project in mind or want to collaborate? Send me a message!</p>
+            </div>
+
             <div class="contact-container">
-                <div class="contact-details-card">
-                    <h3>Contact Information</h3>
-                    <div class="detail-row"><i class="fas fa-envelope"></i> himashakashmira7@gmail.com</div>
-                    <div class="detail-row"><i class="fas fa-phone"></i> +94 78 360 4911</div>
-                    <div class="detail-row"><i class="fas fa-location-dot"></i> Galle, Sri Lanka</div>
-                    <div class="social-footer">
-                        <i class="fab fa-github"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin"></i>
+                <div class="contact-info contact-glass-card">
+                    <h2>Contact Information</h2>
+                    <p class="desc">Feel free to reach out to me through any of these channels. I'm always open
+                        to discussing new projects, creative ideas, or opportunities.</p>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-details">
+                                <span>Email</span>
+                                <p>himashakashmira7@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-details">
+                                <span>Phone</span>
+                                <p>+94 783 604 911</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-details">
+                                <span>Location</span>
+                                <p>Galle, SriLanka</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn-fill">Send Message</button>
-                </form>
+                <div class="contact-form contact-glass-card">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn-send">Send Message <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
             </div>
         </section>
-        </main>
 
         <!-- FOOTER -->
-        <footer>
-            <div class="container">
+        <footer class="site-footer">
+            <div class="footer-panel">
                 <h3>Himasha Kashmira</h3>
-                <p>Galle, Sri Lanka</p>
-                <p class="footer-email">himashakashmira7@gmail.com</p>
+                <p class="footer-location">Galle, SriLanka</p>
+                <p class="footer-contact-line">+94 783 604 911 &nbsp;|&nbsp; himashakashmira7@gmail.com</p>
+
                 <div class="footer-socials">
-                    <i class="fab fa-github"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-linkedin"></i>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-                <hr>
+
                 <p class="copy-text">© 2026 Himasha Kashmira. All rights reserved.</p>
             </div>
         </footer>
+
+        <script>
+            const navToggle = document.getElementById('navToggle');
+            const primaryNav = document.getElementById('primaryNav');
+            const navLinks = document.querySelectorAll('#navMenu a');
+
+            const closeMenu = () => {
+                primaryNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            };
+
+            navToggle.addEventListener('click', () => {
+                const isOpen = primaryNav.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navLinks.forEach((link) => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!primaryNav.contains(event.target) && !navToggle.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+        </script>
 
 </body>
 
