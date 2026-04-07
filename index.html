@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himasha Kashmira | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
 
 <body>
 
@@ -47,8 +58,9 @@
 
                     <h1 class="main-name">
                         Himasha Kashmira <br>
-                        <span id="typing-text">UI/UX Developer</span>
+                        <span class="typing-text"></span>
                     </h1>
+
 
                     <p class="hero-bio">
                         Building user-friendly, functional software solutions with a focus on clean design and great
@@ -56,24 +68,32 @@
                     </p>
 
                     <div class="hero-actions">
-                        <button class="btn-hire">Hire Me</button>
-                        <button class="btn-contact">Contact Me</button>
+                        <a href="#contact" class="btn-contact">Hire Me</a>
+                        <a href="#contact" class="btn-contact">Contact Me</a>
+                    </div>
+
+                    <div class="social-links-centered">
+                        <a href="https://github.com/himashakashmira" aria-label="GitHub" target="_blank"
+                            rel="noopener noreferrer"><img src="Assets/logo/github.png" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/himasha-kashmira-7b5b5b1b4/" aria-label="LinkedIn"
+                            target="_blank" rel="noopener noreferrer"><img src="Assets/logo/linkedin.png"
+                                alt="LinkedIn"></a>
+                        <a href="https://www.facebook.com/share/1Mp8uhYsVK/" aria-label="Facebook" target="_blank"
+                            rel="noopener noreferrer"><img src="Assets/logo/facebook.png" alt="Facebook"></a>
                     </div>
 
                 </div>
 
-                <div class="hero-visual">
+                <div class="hero-visual-wrapper">
+                    <div class="hero-visual">
+                        <div class="complex-frame">
+                        </div>
 
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub"><img src="Assets/logo/github.png" alt="GitHub"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="Assets/logo/linkedin.png" alt="LinkedIn"></a>
-                        <a href="#" aria-label="Facebook"><img src="Assets/logo/facebook.png" alt="Facebook"></a>
-                    </div>
-
-                    <div class="profile-circle">
-                        <div class="vector-lines"></div>
-
-                        <img src="./Assets/images/Profile-img.png" alt="Himasha Profile" class="main-photo">
+                        <div class="profile-and-links-container">
+                            <div class="profile-circle">
+                                <img src="./Assets/images/Profile-img.png" alt="Himasha Profile" class="main-photo">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -271,7 +291,7 @@
         </section>
 
         <!-- MY PROJECTS -->
-        <section class="projects">
+        <section id="projects" class="projects">
             <div class="projects-header">
                 <h2>My Projects</h2>
                 <div class="projects-divider"></div>
@@ -293,7 +313,14 @@
                     <div class="card-overlay">
                         <div class="overlay-content">
                             <h3>Connect 4 Game</h3>
-                            <p>Built a fully functional Connect 4 game using Java with JavaFX for the user interface. Implemented game logic, AI opponent, and interactive gameplay.</p>
+                            <p>Built a fully functional Connect 4 game using Java with JavaFX for the user interface.
+                                Implemented game logic, AI opponent, and interactive gameplay.</p>
+                            <div class="project-buttons">
+                                <a href="#" class="btn-project btn-demo" target="_blank"
+                                    rel="noopener noreferrer">Demo</a>
+                                <a href="https://github.com/himashakashmira/Connect-4-Game.git"
+                                    class="btn-project btn-code" target="_blank" rel="noopener noreferrer">Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -313,40 +340,142 @@
                     <div class="card-overlay">
                         <div class="overlay-content">
                             <h3>Photography System</h3>
-                            <p>Developed a complete photography management system using Java MVC architecture with MySQL database.</p>
+                            <p>Developed a complete photography management system using Java MVC architecture with MySQL
+                                database.</p>
+                            <div class="project-buttons">
+                                <a href="#" class="btn-project btn-demo" target="_blank"
+                                    rel="noopener noreferrer">Demo</a>
+                                <a href="https://github.com/himashakashmira/Photography-System.git"
+                                    class="btn-project btn-code" target="_blank" rel="noopener noreferrer">Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="projects-footer">
-                <button class="btn-view-more">
+                <a href="https://github.com/himashakashmira?tab=repositories" class="btn-view-more" target="_blank"
+                    rel="noopener noreferrer">
                     <i class="fab fa-github"></i> View More Projects >
-                </button>
+                </a>
             </div>
         </section>
 
         <!-- ASSIGNMENT SECTION -->
         <section id="assignments" class="assignments">
             <div class="assign-header">
-                <h2>Assignment</h2>
+                <h2>Assignments</h2>
                 <div class="assign-divider"></div>
             </div>
             <div class="assign-grid">
-                <div class="assign-item">Assignment 01</div>
-                <div class="assign-item">Assignment 02</div>
-                <div class="assign-item">Assignment 03</div>
-                <div class="assign-item">Assignment 04</div>
-                <div class="assign-item">Assignment 05</div>
-                <div class="assign-item">Assignment 06</div>
-                <div class="assign-item">Assignment 07</div>
-                <div class="assign-item">Assignment 08</div>
-                <div class="assign-item">Assignment 09</div>
-                <div class="assign-item">Assignment 10</div>
-                <div class="assign-item">Assignment 11</div>
-                <div class="assign-item">Assignment 12</div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 01</span>
+                    <div class="assign-links">
+                        <a href="https://www.gloomaps.com/FpMHiVfyyE?authuser=0" target="_blank">Site Map</a>
+                        <a href="https://www.figma.com/design/EgpOPwnYF8Q0giktIOtRXT/Untitled?node-id=0-1&t=Ch5n0okXmGQWlH8s-1&authuser=0"
+                            target="_blank">Figma UI Design</a>
+                        <a href="https://drive.google.com/file/d/1uBsJ-l8M9QEfId5MHHRXID2-s1Grbpqu/view?usp=classroom_web&authuser=0"
+                            target="_blank">Wireframes</a>
+                    </div>
+                </div>
+
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 02</span>
+                    <div class="assign-links">
+                        <a href="https://github.com/himashakashmira/My-Portfolio.git?authuser=0" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 03</span>
+                    <div class="assign-links">
+                        <a href="https://github.com/himashakashmira/ITS-1119---Web-Technology-Assignment-03.git?authuser=0"
+                            target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 04</span>
+                    <div class="assign-links">
+                        <a href="https://github.com/himashakashmira/ITS-1119---Web-Technology-Assignment-04.git?authuser=0"
+                            target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 05</span>
+                    <div class="assign-links">
+                        <a href="https://github.com/himashakashmira/My-Portfolio.git?authuser=0" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 06</span>
+                    <div class="assign-links">
+                        <a href="https://www.gloomaps.com/FpMHiVfyyE?authuser=0" target="_blank">Site Map</a>
+                        <a href="https://www.figma.com/design/B1h24mYbeOUdIRYeLn2agd/Untitled?node-id=23-331&t=hgYA6mQGNRQlOYtk-1&authuser=0"
+                            target="_blank">Figma UI Design</a>
+                        <a href="https://drive.google.com/file/d/1h-K1hBm7rbzCNqm3xNZK9v56_HIdqBJs/view?usp=classroom_web&authuser=0"
+                            target="_blank">Wireframes</a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 07</span>
+                    <div class="assign-links">
+                        <a href="" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 08</span>
+                    <div class="assign-links">
+                        <a href="https://github.com/himashakashmira/ITS-1119---Web-Technology-Assignment-08.git?authuser=0"
+                            target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 09</span>
+                    <div class="assign-links">
+                        <a href="" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 10</span>
+                    <div class="assign-links">
+                        <a href="" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 11</span>
+                    <div class="assign-links">
+                        <a href="" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="assign-item special-card">
+                    <span class="assign-title">Assignment 12</span>
+                    <div class="assign-links">
+                        <a href="" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
+
+
 
         <!-- GALLERY SECTION -->
         <section id="gallery" class="gallery">
@@ -354,9 +483,9 @@
 
                 <div class="g">
                     <a href="#">1 <img src="Assets/images/1.jpeg"></a>
-                    <a href="#">2 <img src="Assets/images/2.jpeg"></a>
-                    <a href="#">3 <img src="Assets/images/3.jpeg"></a>
-                    <a href="#">4 <img src="Assets/images/4.jpeg"></a>
+                    <a href="#">2 <img src="Assets/images/2.jpg"></a>
+                    <a href="#">3 <img src="Assets/images/3.jpg"></a>
+                    <a href="#">4 <img src="Assets/images/4.jpg"></a>
                     <a href="#">5 <img src="Assets/images/5.jpeg"></a>
                 </div>
 
@@ -475,7 +604,21 @@
         </script>
 
         <script src="script.js"></script>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const options = {
+                    strings: ['Software Engineer', 'Web Developer', 'UI/UX Designer', 'Problem Solver'],
+                    typeSpeed: 150,
+                    backSpeed: 150,
+                    loop: true,
+                    showCursor: false
+                };
+
+                const typed = new Typed('.typing-text', options);
+            });
+        </script>
 </body>
 
 </html>

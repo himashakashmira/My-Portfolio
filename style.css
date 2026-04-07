@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-dark: #0a0b1e;
     --bg-gradient: linear-gradient(135deg, #0a0b1e 0%, #1a1a3a 100%);
@@ -46,6 +50,8 @@ header {
     align-items: center;
     position: relative;
     padding: 4px 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 .logo {
@@ -70,6 +76,8 @@ header {
     display: flex;
     list-style: none;
     gap: 25px;
+    flex-wrap: nowrap;
+    align-items: center;
 
     /* Glass Effect */
     background: rgba(255, 255, 255, 0.03);
@@ -79,6 +87,7 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     padding: 12px 35px;
+    white-space: nowrap;
 }
 
 .glass-nav a {
@@ -87,6 +96,8 @@ header {
     font-size: 14px;
     font-weight: 400;
     transition: 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .glass-nav a:hover {
@@ -153,6 +164,7 @@ header {
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .main-name span {
@@ -173,19 +185,20 @@ header {
     }
 }
 
-#typing-text {
-    color: purple;
-    border-right: 3.5px solid black;
+.typing-text {
+    color: #7d5fff; /* ඔබේ theme එකේ purple පාට */
+    border-right: 3px solid #7d5fff; /* Cursor එකේ පාට */
     white-space: nowrap;
     overflow: hidden;
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
-    display: inline-block;
-    min-height: calc(3.5rem * 1.1);
+    display: inline; /* inline දැම්මම ඒක පේළිය දිගේම ලස්සනට යනවා */
+    vertical-align: middle; /* අකුරු සමානව තියන්න */
+    animation: blink 0.7s steps(2) infinite;
 }
 
-#typing-text {
+.typing-text {
     animation: blink 0.7s steps(2) infinite;
 }
 
@@ -203,6 +216,7 @@ header {
     padding: 12px 30px;
     border-radius: 30px;
     font-weight: 600;
+    text-decoration: none !important;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -227,6 +241,7 @@ header {
 
     padding: 12px 30px;
     border-radius: 30px;
+    text-decoration: none !important;
 
     cursor: pointer;
     transition: all 0.3s ease;
@@ -243,108 +258,137 @@ header {
     transform: translateY(-2px) scale(0.99);
 }
 
-/* Profile Image */
 
-/* Hero container */
-.hero-visual {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 600px;
-}
-
-/* Background Circle */
-.profile-circle {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(181.59deg, rgba(255, 255, 255, 0) 1.27%, #544088 98.65%);
-
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Main Image */
-.main-photo {
-    width: 110%;
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
+/* Social links */
 
 
-.vector-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('Assets/images/vector-line.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: 1;
-}
-
-/* Home Page Social Links */
-
-.social-links {
-    position: absolute;
-    bottom: 80px;
-    left: 285px;
-    transform: translateX(-50%);
-
+.social-links-centered {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
     gap: 15px;
+
+    margin-top: 50px;
+    margin-left: 0;
+    align-self: flex-start;
 }
 
-.social-links a {
+.buttons .social-links-centered {
+    align-self: center;
+}
+
+.right-section .social-links-centered {
+    justify-content: center;
+}
+
+.social-links-centered a {
     width: 45px;
     height: 45px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
-
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
     border: 1px solid rgba(255, 255, 255, 0.2);
-
     color: white;
     font-size: 18px;
-
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.social-links a img {
+.social-links-centered a img {
     width: 20px;
     height: 20px;
     object-fit: contain;
     display: block;
 }
 
-.social-links a:hover {
+.social-links-centered a:hover {
     transform: scale(1.15);
     background: rgba(125, 95, 255, 0.3);
     box-shadow: 0 0 15px rgba(125, 95, 255, 0.5);
 }
 
-.social-links a:active {
+.social-links-centered a:active {
     transform: translateY(-2px) scale(0.99);
+}
+
+
+/* Profile Image */
+
+
+.hero-visual-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 600px;
+}
+
+.complex-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; 
+    height: 600px;
+    background: url('Assets/images/circlebck.png') center/contain no-repeat; 
+    opacity: 1;
+    z-index: 0;
+}
+
+/* Portrait & Links */
+
+.profile-and-links-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.profile-circle {
+    position: relative;
+    width: 284px;
+    height: 284px;
+    border-radius: 50%;
+    
+    background: linear-gradient(rgba(12, 4, 41, 0.6), #0a0b1e), url('Assets/images/Vector_line2.png') center/cover no-repeat;
+    background-blend-mode: normal;
+    
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+    border: 2px solid rgba(255, 215, 0, 0.3); /* Transparent gold border */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+
+    transform: translateY(-27px);
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 
@@ -1088,6 +1132,7 @@ header {
     font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none !important;
 }
 
 .btn-view-more i {
@@ -1268,6 +1313,66 @@ header {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
     font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 20px;
+    animation: slideUpBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.1s;
+}
+
+.btn-project {
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 2px solid;
+    background: rgba(125, 95, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(125, 95, 255, 0.1);
+}
+
+.btn-demo {
+    color: var(--primary-purple);
+    border-color: rgba(125, 95, 255, 0.6);
+}
+
+.btn-demo:hover {
+    background: rgba(125, 95, 255, 0.3);
+    border-color: var(--primary-purple);
+    box-shadow: 0 8px 25px rgba(125, 95, 255, 0.4), 0 0 20px rgba(125, 95, 255, 0.2);
+    transform: translateY(-3px) scale(1.05);
+}
+
+.btn-demo:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.btn-code {
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(125, 95, 255, 0.4);
+    background: linear-gradient(135deg, rgba(125, 95, 255, 0.25) 0%, rgba(125, 95, 255, 0.1) 100%);
+}
+
+.btn-code:hover {
+    background: linear-gradient(135deg, rgba(125, 95, 255, 0.4) 0%, rgba(125, 95, 255, 0.25) 100%);
+    border-color: rgba(125, 95, 255, 0.8);
+    box-shadow: 0 8px 25px rgba(125, 95, 255, 0.35), 0 0 20px rgba(125, 95, 255, 0.15);
+    transform: translateY(-3px) scale(1.05);
+}
+
+.btn-code:active {
+    transform: translateY(-1px) scale(0.98);
 }
 
 @keyframes slideUpBounce {
@@ -1309,6 +1414,7 @@ header {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 14px;
+    color: var(--text-white);
 }
 
 .assign-divider {
@@ -1338,8 +1444,10 @@ header {
     color: var(--text-dim);
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
 }
 
+/* Default File Icon for all items */
 .assign-item::after {
     content: '';
     width: 34px;
@@ -1358,6 +1466,48 @@ header {
 
 .assign-item:active {
     transform: translateY(-2px) scale(0.99);
+}
+
+/* Styling for Assignment 01 */
+
+.special-card {
+    padding: 30px 20px !important;
+    cursor: default;
+}
+
+/* Removing the file icon only Assignment 01 */
+.special-card::after {
+    display: none !important;
+}
+
+.assign-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-white);
+}
+
+.assign-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.assign-links a {
+    text-decoration: none;
+    background: rgba(125, 95, 255, 0.15);
+    color: var(--text-dim);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(125, 95, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.assign-links a:hover {
+    background: var(--primary-purple);
+    color: #fff;
+    transform: scale(1.05);
 }
 
 
@@ -1748,7 +1898,15 @@ header {
     }
 
     .hero-visual {
-        height: 500px;
+        min-height: 500px;
+    }
+
+    .complex-frame {
+        width: 550px;
+        height: 550px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .social-links {
@@ -1906,8 +2064,9 @@ header {
     }
 
     .main-name,
-    #typing-text {
-        font-size: 2.15rem;
+    .typing-text {
+        font-size: 2.8rem !important;
+        min-height: calc(2.8rem * 1.1);
     }
 
     .hero-bio {
@@ -1930,52 +2089,47 @@ header {
 
     .hero-visual {
         width: 100%;
-        height: 360px;
-        order: 2;
+        min-height: 400px;
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 42px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding-top: 20px;
     }
 
-    .hero-visual::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 120px;
-        height: 28px;
-        transform: translateX(-50%);
-        background-image:
-            linear-gradient(rgba(125, 95, 255, 0.45) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(125, 95, 255, 0.45) 1px, transparent 1px);
-        background-size: 12px 12px;
-        border-radius: 8px;
-        opacity: 0.8;
-        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    .profile-and-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        z-index: 5;
     }
 
     .profile-circle {
-        width: 230px;
-        height: 230px;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
     }
 
-    .main-photo {
-        width: 112%;
-        bottom: -26px;
-    }
-
-    .social-links {
-        position: static;
-        transform: none;
+    .social-links-centered {
+        display: flex;
+        flex-direction: row !important;
         justify-content: center;
-        margin-top: 18px;
-        order: 3;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+        gap: 20px;
     }
 
-    .social-links a {
-        width: 38px;
-        height: 38px;
-        font-size: 15px;
+    .complex-frame {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .strip-item {
@@ -2011,6 +2165,10 @@ header {
     .assignments {
         padding-left: 18px;
         padding-right: 18px;
+    }
+
+    .assign-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .project-cards-container {
@@ -2129,14 +2287,23 @@ header {
     }
 
     .main-name,
-    #typing-text {
-        font-size: 1.78rem;
+    .typing-text {
+        font-size: 1.8rem !important;
+        min-height: calc(1.8rem * 1.1);
+        border-right-width: 2px;
+
+        white-space: normal !important; 
+        overflow: visible !important;
     }
 
-    #typing-text {
-        min-height: auto;
-        white-space: normal;
-        border-right-width: 2px;
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+        text-align: center;
     }
 
     .hero-bio {
@@ -2144,7 +2311,7 @@ header {
     }
 
     .hero-visual {
-        height: 320px;
+        min-height: 320px;
         padding-top: 34px;
     }
 
@@ -2154,7 +2321,22 @@ header {
         background-size: 10px 10px;
     }
 
-    .profile-circle,
+    .complex-frame {
+        width: 350px;
+        height: 350px;
+    }
+
+    .profile-circle {
+        width: 170px; 
+        height: 170px;
+        transform: translateY(-36px);
+    }
+
+    .social-links-centered {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    
     .about-img {
         width: 200px;
         height: 200px;
@@ -2178,10 +2360,12 @@ header {
     .cert-grid,
     .assign-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
-
-    .assign-item {
-        padding: 34px 14px;
+    
+    .assignments {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .gallery-container {
@@ -2250,6 +2434,15 @@ header {
     .copy-text {
         font-size: 0.72rem;
     }
+
+    .btn-project {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .project-buttons {
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -2271,8 +2464,13 @@ header {
     }
 
     .main-name,
-    #typing-text {
-        font-size: 1.58rem;
+    .typing-text {
+        font-size: 1.8rem !important;
+        min-height: calc(1.8rem * 1.1);
+    }
+    
+    .hero-content h1 {
+        line-height: 1.2;
     }
 
     .hero-actions {
@@ -2286,10 +2484,20 @@ header {
     }
 
     .hero-visual {
-        height: 290px;
+        min-height: 290px;
     }
 
-    .profile-circle,
+    .complex-frame {
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-circle {
+        width: 148px;
+        height: 150px;
+        transform: translateY(-33px);
+    }
+    
     .about-img {
         width: 180px;
         height: 180px;
@@ -2297,6 +2505,15 @@ header {
 
     .g a {
         height: 110px;
+    }
+
+    .btn-project {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .project-buttons {
+        gap: 8px;
     }
 }
 
@@ -2328,18 +2545,42 @@ header {
     }
 
     .main-name,
-    #typing-text {
-        font-size: 1.38rem;
+    .typing-text {
+        font-size: 1.5rem !important;
+        min-height: calc(1.5rem * 1.1);
+        letter-spacing: -0.5px;
     }
 
-    .hero-actions {
+    .hero-content {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+        margin-top: 25px;
     }
 
     .btn-hire,
     .btn-contact {
-        width: 86%;
-        max-width: 160px;
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
+        font-size: 0.9rem;
     }
 
     .hero-visual {
@@ -2351,6 +2592,11 @@ header {
         width: 82px;
         height: 20px;
         background-size: 8px 8px;
+    }
+
+    .complex-frame {
+        width: 320px;
+        height: 320px;
     }
 
     .profile-circle,
