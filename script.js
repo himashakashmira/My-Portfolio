@@ -3,7 +3,7 @@ const infoCards = document.querySelectorAll('.info-card');
 
 infoCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
+        const rect = card.getBoundingClientRect(); //get the position
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         
@@ -39,31 +39,5 @@ skillTags.forEach(tag => {
     tag.addEventListener('mouseleave', () => {
         tag.style.setProperty('--mouse-x', '50%');
         tag.style.setProperty('--mouse-y', '50%');
-    });
-});
-
-// Navigation toggle functionality
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const primaryNav = document.getElementById('primaryNav');
-
-navToggle.addEventListener('click', () => {
-    const isOpen = primaryNav.classList.contains('open');
-    
-    if (isOpen) {
-        primaryNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-    } else {
-        primaryNav.classList.add('open');
-        navToggle.setAttribute('aria-expanded', 'true');
-    }
-});
-
-// Close menu when a link is clicked
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        primaryNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
     });
 });

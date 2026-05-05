@@ -186,15 +186,15 @@ header {
 }
 
 .typing-text {
-    color: #7d5fff; /* ඔබේ theme එකේ purple පාට */
-    border-right: 3px solid #7d5fff; /* Cursor එකේ පාට */
+    color: #7d5fff;
+    border-right: 3px solid #7d5fff;
     white-space: nowrap;
     overflow: hidden;
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
-    display: inline; /* inline දැම්මම ඒක පේළිය දිගේම ලස්සනට යනවා */
-    vertical-align: middle; /* අකුරු සමානව තියන්න */
+    display: inline;
+    vertical-align: middle;
     animation: blink 0.7s steps(2) infinite;
 }
 
@@ -343,9 +343,9 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px; 
+    width: 600px;
     height: 600px;
-    background: url('Assets/images/circlebck.png') center/contain no-repeat; 
+    background: url('Assets/images/circlebck.png') center/contain no-repeat;
     opacity: 1;
     z-index: 0;
 }
@@ -368,17 +368,18 @@ header {
     width: 284px;
     height: 284px;
     border-radius: 50%;
-    
+
     background: linear-gradient(rgba(12, 4, 41, 0.6), #0a0b1e), url('Assets/images/Vector_line2.png') center/cover no-repeat;
     background-blend-mode: normal;
-    
+
     overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
-    
-    border: 2px solid rgba(255, 215, 0, 0.3); /* Transparent gold border */
+
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    /* Transparent gold border */
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
 
     transform: translateY(-27px);
@@ -1151,7 +1152,7 @@ header {
 }
 
 
-/* ANIMATED PROJECT CARDS */
+/* PROJECT CARDS ANIMATE */
 
 .project-cards-container {
     margin: 50px auto;
@@ -1196,7 +1197,7 @@ header {
 
 .project-card-new:hover {
     transform: translateY(-12px) scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 20px 50px rgba(125, 95, 255, 0.25),
         0 0 50px rgba(125, 95, 255, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -1288,7 +1289,7 @@ header {
 
 .card-overlay:active {
     transform: translateY(0) scale(1.03);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-card-new:hover .card-overlay {
@@ -1380,9 +1381,11 @@ header {
         transform: translateY(30px);
         opacity: 0;
     }
+
     60% {
         transform: translateY(-8px);
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -1447,7 +1450,6 @@ header {
     position: relative;
 }
 
-/* Default File Icon for all items */
 .assign-item::after {
     content: '';
     width: 34px;
@@ -2292,11 +2294,12 @@ header {
         min-height: calc(1.8rem * 1.1);
         border-right-width: 2px;
 
-        white-space: normal !important; 
+        white-space: normal !important;
         overflow: visible !important;
     }
 
-    html, body {
+    html,
+    body {
         overflow-x: hidden;
         position: relative;
     }
@@ -2327,7 +2330,7 @@ header {
     }
 
     .profile-circle {
-        width: 170px; 
+        width: 170px;
         height: 170px;
         transform: translateY(-36px);
     }
@@ -2336,7 +2339,7 @@ header {
         margin-top: 20px;
         gap: 15px;
     }
-    
+
     .about-img {
         width: 200px;
         height: 200px;
@@ -2362,7 +2365,7 @@ header {
         grid-template-columns: 1fr;
         gap: 12px;
     }
-    
+
     .assignments {
         padding-left: 20px;
         padding-right: 20px;
@@ -2468,7 +2471,7 @@ header {
         font-size: 1.8rem !important;
         min-height: calc(1.8rem * 1.1);
     }
-    
+
     .hero-content h1 {
         line-height: 1.2;
     }
@@ -2497,7 +2500,7 @@ header {
         height: 150px;
         transform: translateY(-33px);
     }
-    
+
     .about-img {
         width: 180px;
         height: 180px;
@@ -2636,5 +2639,43 @@ header {
 
     .footer-socials a {
         font-size: 0.84rem;
+    }
+
+    #progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        z-index: 9999;
+    }
+
+    #progress-bar {
+        height: 100%;
+        background: var(--primary-purple, #7d5fff);
+        width: 0%;
+    }
+
+    #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 45px;
+        height: 45px;
+        background: #7d5fff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(125, 95, 255, 0.4);
+        transition: 0.3s;
+    }
+
+    #backToTop:hover {
+        transform: translateY(-5px);
     }
 }

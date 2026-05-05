@@ -11,22 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-</script>
 
 <body>
 
     <div class="container">
 
         <!-- NAVIGATION BAR -->
-        <header>
+        <header data-aos="fade-down" data-aos-duration="1000">
             <div class="container nav-wrapper">
                 <div class="logo">Himasha<span>.</span></div>
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"
@@ -52,7 +43,7 @@
             <!-- HERO SECTION -->
             <section id="home" class="hero">
 
-                <div class="hero-content-box">
+                <div class="hero-content-box" data-aos="fade-right" data-aos-duration="1200">
 
                     <span class="greeting">Hey there, I'm</span>
 
@@ -84,7 +75,7 @@
 
                 </div>
 
-                <div class="hero-visual-wrapper">
+                <div class="hero-visual-wrapper" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="hero-visual">
                         <div class="complex-frame">
                         </div>
@@ -128,13 +119,13 @@
 
             <!-- Top: Profile image + text -->
             <div class="about-top">
-                <div class="about-img">
+                <div class="about-img" data-aos="fade-right" data-aos-duration="1000">
                     <div class="image-wrapper">
                         <img src="Assets/images/About-img.png" alt="About Me">
                     </div>
                 </div>
 
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
                     <span class="about-label">About Me</span>
                     <h2>I'm Himasha Kashmira,<br>I'm a Professional Softwere Engineer.</h2>
                     <p>I am a Software Engineering student with a strong interest in building functional and
@@ -151,7 +142,7 @@
             <div class="about-bottom">
 
                 <!-- Education Card -->
-                <div class="info-card edu-card">
+                <div class="info-card edu-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-header">
                         <i class="fas fa-graduation-cap"></i>
                         <h3>Education</h3>
@@ -190,7 +181,7 @@
                 </div>
 
                 <!-- Skills Card -->
-                <div class="info-card skills-card">
+                <div class="info-card skills-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-header">
                         <i class="fas fa-code"></i>
                         <h3>Skills</h3>
@@ -292,13 +283,13 @@
 
         <!-- MY PROJECTS -->
         <section id="projects" class="projects">
-            <div class="projects-header">
+            <div class="projects-header" data-aos="fade-up">
                 <h2>My Projects</h2>
                 <div class="projects-divider"></div>
             </div>
 
             <div class="project-cards-container">
-                <div class="project-card-new">
+                <div class="project-card-new" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card-image">
                         <img src="Assets/images/Project1.jpg" alt="Connect 4 Game">
                     </div>
@@ -325,7 +316,7 @@
                     </div>
                 </div>
 
-                <div class="project-card-new">
+                <div class="project-card-new" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card-image">
                         <img src="Assets/images/Photography.png" alt="Photography System">
                     </div>
@@ -363,12 +354,12 @@
 
         <!-- ASSIGNMENT SECTION -->
         <section id="assignments" class="assignments">
-            <div class="assign-header">
+            <div class="assign-header" data-aos="fade-up">
                 <h2>Assignments</h2>
                 <div class="assign-divider"></div>
             </div>
             <div class="assign-grid">
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="100">
                     <span class="assign-title">Assignment 01</span>
                     <div class="assign-links">
                         <a href="https://www.gloomaps.com/FpMHiVfyyE?authuser=0" target="_blank">Site Map</a>
@@ -379,7 +370,7 @@
                     </div>
                 </div>
 
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="200">
                     <span class="assign-title">Assignment 02</span>
                     <div class="assign-links">
                         <a href="https://github.com/himashakashmira/My-Portfolio.git?authuser=0" target="_blank">
@@ -387,7 +378,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="300">
                     <span class="assign-title">Assignment 03</span>
                     <div class="assign-links">
                         <a href="https://github.com/himashakashmira/ITS-1119---Web-Technology-Assignment-03.git?authuser=0"
@@ -396,7 +387,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="400">
                     <span class="assign-title">Assignment 04</span>
                     <div class="assign-links">
                         <a href="https://github.com/himashakashmira/ITS-1119---Web-Technology-Assignment-04.git?authuser=0"
@@ -405,7 +396,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="500">
                     <span class="assign-title">Assignment 05</span>
                     <div class="assign-links">
                         <a href="https://github.com/himashakashmira/My-Portfolio.git?authuser=0" target="_blank">
@@ -413,7 +404,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="600">
                     <span class="assign-title">Assignment 06</span>
                     <div class="assign-links">
                         <a href="https://www.gloomaps.com/FpMHiVfyyE?authuser=0" target="_blank">Site Map</a>
@@ -423,7 +414,7 @@
                             target="_blank">Wireframes</a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="700">
                     <span class="assign-title">Assignment 07</span>
                     <div class="assign-links">
                         <a href="" target="_blank">
@@ -431,7 +422,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="800">
                     <span class="assign-title">Assignment 08</span>
                     <div class="assign-links">
                         <a href="https://github.com/himashakashmira/ITS-1119---Web-Technology-Assignment-08.git?authuser=0"
@@ -440,7 +431,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="900">
                     <span class="assign-title">Assignment 09</span>
                     <div class="assign-links">
                         <a href="" target="_blank">
@@ -448,7 +439,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="1000">
                     <span class="assign-title">Assignment 10</span>
                     <div class="assign-links">
                         <a href="" target="_blank">
@@ -456,7 +447,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="1100">
                     <span class="assign-title">Assignment 11</span>
                     <div class="assign-links">
                         <a href="" target="_blank">
@@ -464,7 +455,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="assign-item special-card">
+                <div class="assign-item special-card" data-aos="fade-up" data-aos-delay="1200">
                     <span class="assign-title">Assignment 12</span>
                     <div class="assign-links">
                         <a href="" target="_blank">
@@ -478,7 +469,7 @@
 
 
         <!-- GALLERY SECTION -->
-        <section id="gallery" class="gallery">
+        <section id="gallery" class="gallery" data-aos="zoom-in" data-aos-duration="1000">
             <div class="gallery-container">
 
                 <div class="g">
@@ -499,13 +490,13 @@
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="contact-section">
-            <div class="contact-header">
+            <div class="contact-header" data-aos="fade-up">
                 <h1>Get in Touch</h1>
                 <p>Have a project in mind or want to collaborate? Send me a message!</p>
             </div>
 
             <div class="contact-container">
-                <div class="contact-info contact-glass-card">
+                <div class="contact-info contact-glass-card" data-aos="fade-right" data-aos-duration="1000">
                     <h2>Contact Information</h2>
                     <p class="desc">Feel free to reach out to me through any of these channels. I'm always open
                         to discussing new projects, creative ideas, or opportunities.</p>
@@ -541,7 +532,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form contact-glass-card">
+                <div class="contact-form contact-glass-card" data-aos="fade-left" data-aos-duration="1000">
                     <form>
                         <input type="text" placeholder="Your Name" required>
                         <input type="email" placeholder="Your Email" required>
@@ -555,7 +546,7 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="site-footer">
+        <footer class="site-footer" data-aos="fade-up" data-aos-duration="1000">
             <div class="footer-panel">
                 <h3>Himasha Kashmira</h3>
                 <p class="footer-location">Galle, SriLanka</p>
@@ -570,6 +561,15 @@
                 <p class="copy-text">© 2026 Himasha Kashmira. All rights reserved.</p>
             </div>
         </footer>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- BACK TO TOP BUTTON -->
+        <button id="backToTop" title="Go to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
         <script>
             const navToggle = document.getElementById('navToggle');
@@ -618,6 +618,36 @@
 
                 const typed = new Typed('.typing-text', options);
             });
+        </script>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init({
+                duration: 1200,
+                once: true,
+                offset: 120
+            });
+
+            // Scroll Progress Bar Logic
+            window.onscroll = function () {
+                let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrolled = (winScroll / height) * 100;
+                document.getElementById("progress-bar").style.width = scrolled + "%";
+
+                // Back to top button
+                const btt = document.getElementById("backToTop");
+                if (winScroll > 300) { btt.style.display = "flex"; }
+                else { btt.style.display = "none"; }
+            };
+
+            // Back to top click
+            document.getElementById("backToTop").onclick = function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
         </script>
 </body>
 
